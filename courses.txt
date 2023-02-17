@@ -1,0 +1,41 @@
+<div class="col-lg">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="card-title">Artificial Intelligence 1 & 2</h6>
+                    <p class="card-text">
+                      Studying AI techniques through continuous labs. Topics include <u>natural language processing</u>,
+                      <u>optimization</u>, and accuracy. Programming
+                      assignments include a semantic lexicon for English, N-queens and other local search, Tic-Tac-Toe
+                      and neural networks. The programming language is <u>Python</u>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="card-title">Computer Vision 1 & 2</h6>
+                    <p class="card-text">
+                      This course will introduce students to modern
+                      approaches based on <u>Deep Learning Models</u> and to open problems in the field and build on
+                      their
+                      knowledge from earlier computer science and mathematics coursework. Topics covered in the course
+                      include large neural networks trained with back propogation and their application to Computer
+                      Vision, as well as other advanced techniques using <u>C++</u>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="card-title">Computational Statistics</h6>
+                    <p class="card-text">
+                      Students will use statistics as a tool to solve a variety of problems in different areas,
+                      including political science, economics, sports, ecology, law, and the biological and physical
+                      sciences. Extensive use of the calculator and computer is included. The course emphasizes critical
+                      thinking and clear, precise writing. Labs written using <u>R</u>.
+                    </p>
+                  </div>
+                </div>
+              </div>

@@ -1,0 +1,23 @@
+.sideindicator{
+    width: 100px;
+    height: 20px;
+    transform: skew(-25deg);
+    background-color: aliceblue;
+}
+
+.sidebar{
+    position: absolute;
+    right: 10%;
+    top:25%;
+}
+
+.section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.navbar{
+    
+}
