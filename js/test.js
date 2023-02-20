@@ -11,8 +11,6 @@ document.onload = function (e) {
     }
 }
 
-
-
 window.addEventListener("scroll", function () {
 
     // document.getElementsByClassName("section").forEach(function(elementTarget){
