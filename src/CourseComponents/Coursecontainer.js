@@ -1,6 +1,5 @@
 import React from "react";
 import '../index.css';
-import '../test.js';
 import Nav from './Nav';
 import Coursepage from "./Coursepage";
 const Container = ({ }) => {

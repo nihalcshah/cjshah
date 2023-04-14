@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './index.css';
-import Container from './AppComponents/Container';
+import Container from './HomeComponents/Container';
 import React from 'react';
 import { Route, Router, Link } from "react-router-dom";
 

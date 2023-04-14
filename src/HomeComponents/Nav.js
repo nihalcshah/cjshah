@@ -1,14 +1,13 @@
 import React from "react";
 import '../index.css';
-import '../test.js';
 const Nav = ({ }) => {
     return (
         <div style={{position: "absolute"}}>
             <button class="cornerdrop" type="button" style={{border:"none", background:"none"}} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <div class="p-2 rounded shadow">
+                <div class="p-2 rounded shadow" style={{backgroundColor:"none"}}>
                     <div className="row">
-                    <img src="/unnamed.png" class="img-fluid" alt="" />
+                    <img src="/pageicons/unnamed.png" class="img-fluid" alt="" />
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                     </svg>
@@ -31,13 +30,13 @@ const Nav = ({ }) => {
                     </button>
                     </li>
                     <li class="nav-item fs-4">
-                        <a class="nav-link active h2 hoverscroll" aria-current="page" href="/courses">Courses</a>
+                        <a class="nav-link active h2 hoverscroll" aria-current="page" href="">Experience</a>
                     </li>
                     <li class="nav-item fs-4">
-                        <a class="nav-link active h2 hoverscroll" aria-current="page" href="process.html">The Process</a>
+                        <a class="nav-link active h2 hoverscroll" aria-current="page" href="">Courses</a>
                     </li>
                     <li class="nav-item fs-4">
-                        <a class="nav-link active h2 hoverscroll" aria-current="page" href="journey.html">The Journey</a>
+                        <a class="nav-link active h2 hoverscroll" aria-current="page" href="">Skills</a>
                     </li>
                     <li class="nav-item fs-4">
                         <a class="nav-link active h2 hoverscroll" aria-current="page" href="https://github.com/nihalcshah/">My Github <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github mb-1" viewBox="0 0 16 16">

@@ -1,6 +1,5 @@
 import React from "react";
 import '../index.css';
-import '../test.js';
 import Sidebar from "./Sidebar";
 import Home from './Home';
 import Courses from './Courses';

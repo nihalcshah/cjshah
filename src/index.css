@@ -15,6 +15,8 @@ body {
   filter: url(#turbulence);
 }
 
+
+
 .blob:hover {
   transform: scale(1.2);
 }
@@ -119,6 +121,24 @@ body {
   /* text-shadow: 0 0px 0px #fafffaef; */
 }
 
+.hr-sect {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  color: black;
+  margin: 8px 0px;
+}
+.hr-sect:before,
+.hr-sect:after {
+  content: "";
+  flex-grow: 1;
+  background: black;
+  height: 2px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 8px;
+}
+
 .kl{
   position: absolute;
   left: -10px;
@@ -136,6 +156,94 @@ body {
 .btnstyle:hover {
   background-position: right center; /* change the direction of the change here */
   color: white;
+}
+
+.pulsing {
+  animation: pulsing-animation 2s ease-in-out infinite;
+}
+
+.changing{
+  /* mix-blend-mode: hard-light; */
+  /* opacity: 0.6; */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%);
+}
+
+.buttonFill {
+  position: relative;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: black;
+  border: 2px black solid;
+  text-decoration: 0;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+
+.buttonFill:hover {
+  color: whitesmoke;
+}
+
+.buttonFill:before {
+  content: "";
+  position: absolute;
+  background: #000;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: right 0.15s ease-in;
+}
+
+.buttonFill:hover:before {
+  right: 0;
+}
+
+
+
+
+@keyframes pulsing-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.neon {
+  color: #000000;
+  text-shadow:
+    /* 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff, */
+    0 0 40px rgb(183, 155, 255),
+    0 0 80px rgb(183, 155, 255),
+    0 0 90px rgb(183, 155, 255),
+    0 0 100px rgb(183, 155, 255),
+    0 0 150px rgb(183, 155, 255);
+  animation: neon-animation 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-animation {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes shine {
@@ -302,8 +410,72 @@ body {
 ul{
   list-style-type: none;
 }
+
+@keyframes text-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the text */
+.text-pop {
+  animation-name: text-pop;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* Define the keyframes for the animation */
+@keyframes letter-bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the text */
+.letter-bounce {
+  animation-name: letter-bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+
 .sec{
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 43.46%, rgba(201, 184, 251, 0.341156) 78.8%, rgba(135, 96, 245, 0.207) 100%);
+  overflow-x: hidden;
 }
 
 .sec2{
