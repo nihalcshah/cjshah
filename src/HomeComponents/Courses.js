@@ -1,16 +1,19 @@
 import React from "react";
 import '../index.css';
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Courses = ({ }) => {
     return (
         <div className="section sec p-5"  id="Courses" style={{minHeight:"100vh"}}>
             <div className="">
-                <h1 style={{fontSize:"4rem", fontWeight:"350"}}>courses</h1>
+                <h1 style={{}} className="heading">courses</h1>
                 <h6>classes I played video games through (this is a joke)</h6>
             </div>
             <br/>
             <div className="row">
                 <div className="col-md-4 p-2 d-flex">
+                <AnimationOnScroll animateIn="animate__animated animate__backInLeft" scrollableParentSelector="">
                     <div className="p-2 rounded card shadow m-auto" style={{border:"black"}}>
                         <div className="card">
                             <h3 className="card-header">Math</h3>
@@ -28,8 +31,12 @@ const Courses = ({ }) => {
                             </ul>
                         </div>
                     </div>
+                    </AnimationOnScroll>
                 </div>
+                
                 <div className="col-md-4 p-2 d-flex">
+                    <AnimationOnScroll animateIn="animate__animated animate__backInDown" scrollableParentSelector="">
+
                     <div className="p-2 rounded card shadow m-auto" style={{border:"black"}}>
                         <div className="card">
                             <h3 className="card-header">CS</h3>
@@ -48,8 +55,11 @@ const Courses = ({ }) => {
                             </ul>
                         </div>
                     </div>
+                    </AnimationOnScroll>
                 </div>
                 <div className="col-md-4 p-2 d-flex">
+                <AnimationOnScroll animateIn="animate__animated animate__backInRight" scrollableParentSelector="">
+
                     <div className="p-2 rounded card shadow m-auto" style={{border:"black"}}>
                         <div className="card">
                             <h3 className="card-header">Technical</h3>
@@ -66,6 +76,8 @@ const Courses = ({ }) => {
                             </ul>
                         </div>
                     </div>
+                    </AnimationOnScroll>
+
                 </div>
             </div>
             <br/>

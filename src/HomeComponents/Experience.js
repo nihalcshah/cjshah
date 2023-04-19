@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import '../index.css';
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function getExperience() {
     var experienceList = {
@@ -17,13 +19,14 @@ function getExperience() {
             "./workplaces/spraxa.jpg",
             "Computer Vision・Instance Segmentation・Memory Allocation",
         ],
-        
+
     }
 
     var indents = [];
     for (let k in experienceList) {
         indents.push(
-            <div className="p-4">
+            <div className="p-4 inline " style={{width:"100vw"}}>
+                <AnimationOnScroll animateIn="animate__animated animate__pulse" scrollableParentSelector="">
                 <div className="rounded-3 shadow p-2" style={{ background: "none" }}>
                     <div className="row p-3">
                         <div className="col-md-3 ">
@@ -49,27 +52,83 @@ function getExperience() {
                         </div>
                     </div>
                     <div className="p-2">
-                        <h6 className="text-center" style={{ letterSpacing: "3px", fontWeight: "400", textTransform:"uppercase" }}>{experienceList[k][0]}・{experienceList[k][1]}</h6>
-                        <h1 className="text-center" style={{ letterSpacing: "10px", fontWeight: "500", textTransform:"uppercase" }}>{k}</h1>
+                        <h6 className="text-center" style={{ letterSpacing: "0.2vw", fontWeight: "400", textTransform: "uppercase" }}>{experienceList[k][0]}・{experienceList[k][1]}</h6>
+                        <h1 className="text-center experience-title" style={{ letterSpacing: "0.25vw", fontWeight: "500", textTransform: "uppercase" }}>{k}</h1>
                     </div>
                 </div>
+                </AnimationOnScroll>
             </div>
         );
     }
     return indents;
 }
 
+const Typing = (props) => {
+    const [animated, setAnimated] = useState(false);
+    const textRef = useRef();
 
-const Experience = ({ }) => {
+    useEffect(() => {
+        const checkScroll = () => {
+            console.log("CurrentRef", textRef.current)
+            console.log()
+            const textTop = textRef.current.getBoundingClientRect().top;
+            console.log(textTop)
+            console.log("Window pos: " +window.scrollY + window.innerHeight)
+            console.log("Texttop: "+ textTop)
+            if (window.scrollY + window.innerHeight > textTop) {
+                
+                setAnimated(true);
+                window.removeEventListener('scroll', checkScroll);
+            }
+        };
+        
+        window.addEventListener('scroll', checkScroll);
+        return () => window.removeEventListener('scroll', checkScroll);
+    });
+    const animationClass = animated ? 'typing' : '';
+
     return (
-        <div className="section sec2" style={{ minHeight: "100vh" }} id="">
+        <h1 style={{}} ref={textRef} className={`heading ${animationClass}`}>{props.header}</h1>
+    )
+}
+ 
+const Experience = () => {
+    const [animated, setAnimated] = useState(false);
+    const alignScroll = useRef()
+    console.log(alignScroll.current)
+
+    useEffect(() => {
+        const checkScroll = () => {
+            console.log("CurrentRef", alignScroll.current)
+            console.log()
+            const textTop = alignScroll.current.getBoundingClientRect().top;
+            console.log(textTop)
+            console.log("Window pos: " +window.scrollY + window.innerHeight)
+            console.log("Texttop: "+ textTop)
+            if (window.scrollY + window.innerHeight > textTop) {
+                
+                setAnimated(true);
+                window.removeEventListener('scroll', checkScroll);
+            }
+        };
+        
+        window.addEventListener('scroll', checkScroll);
+        return () => window.removeEventListener('scroll', checkScroll);
+    });
+
+    return (
+        <div className="section sec2" style={{ minHeight: "100vh" }} ref={alignScroll} id="">
             <div className="text-center relative">
-                <h1 style={{ fontSize: "3rem" }}>work experience</h1>
-                <h6 style={{ fontSize: "1rem" }}>internships, clubs, leadership (linkedin go crazy)</h6>
-                <br/>
-                <a className="buttonFill p-2" style={{position: "relative"}}>view more.</a>
+                {/* <AnimationOnScroll animateIn="typing"> */}
+                <Typing header="work experience" />
+                {/* </AnimationOnScroll> */}
+                <h6 style={{ fontSize: "1rem" }}><u>internships, clubs, leadership (linkedin go crazy)</u></h6>
+                <br />
+                <a className="buttonFill p-2" style={{ position: "relative" }}>view more.</a>
             </div>
-            {getExperience().slice()}
+            <div style={{}} className="horizontal-snap" id="horz">
+                {getExperience().slice()}
+            </div>
 
         </div>
     );

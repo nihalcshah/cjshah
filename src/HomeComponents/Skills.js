@@ -31,7 +31,7 @@ function getSkills(){
         "Frameworks": [
             "Django",
             "Node.js",
-            "React"
+            "React",
         ],
         "Machine Learning": [
             "K-Nearest Neighbors (KNN)",
@@ -40,13 +40,15 @@ function getSkills(){
             "Artificial Neural Networks (NN)",
             "Recurrent Neural Networks (RNN)",
             "Convolutional Neural Networks (CNN)",
-            "Non-Max Supression (NMS)"
+            "Non-Max Supression (NMS)",
+            "Derivation of Backpropogation"
         ],
         "Computer Vision": [
             "Object Detection",
             "Object Recognition",
             "Instance Segmentation",
-            "Canny Edge Detection",        
+            "Canny Edge Detection", 
+                   
         ],
         "NLP": [
             "Feature Classification",
@@ -58,13 +60,29 @@ function getSkills(){
             "OpenCV",
             "Pandas",
             "Selenium",
+        ],
+        "Databasing":[
+            "MariaDB",
+            "MySQL",
+            "Postgres"
         ]
     }
     
     var indents = [];
     for (let k in s_list) {
         for (var j = 0; j < s_list[k].length; j++) {
-            indents.push(<div className="col-lg-3"><div className="card shadow" style={{ backgroundColor: "transparent" }}><div className="card-body" ><h6 className="card-title" style={{ background: "none" }}>{s_list[k][j]}</h6></div></div></div>);
+            indents.push(
+            <div className="col-lg-3">
+                <div className="card shadow" style={{ backgroundColor: "transparent" }}>
+                    <div className="card-body" >
+                        <h6 className="card-title" style={{ background: "none" }}>{s_list[k][j]}</h6>
+                    </div>
+                </div>
+            </div>
+            );
+            if(indents.length>20){
+                break;
+            }
         }
     }
     return indents;
@@ -74,7 +92,10 @@ const Skills = ({ }) => {
     return (
         <div className="section d-flex sec2 p-5" style={{ minHeight: "100vh" }} id="Skills">
             <div className="my-auto">
-                <h3 style={{ fontWeight: 600 }} className="row h3">Skills</h3>
+                <div className="">
+                    <h1 style={{}} className="heading">skills+libraries+algorithms</h1>
+                    <h6>all that mumbo jumbo</h6>
+                </div>
                 <br />
                 <div className="row g-3" id="skillslist">
                     {getSkills().slice()} 
