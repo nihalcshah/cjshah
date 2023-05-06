@@ -1,7 +1,9 @@
 import React from "react";
+import '../index.css';
+import Nav from '../Nav';
+
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-import Typing from "./Typing";
 
 function reveal() {
     var skills = document.getElementById("Skills");
@@ -34,27 +36,38 @@ function getSkills(){
             "Django",
             "Node.js",
             "React",
+            "Android Studios"
         ],
         "Machine Learning": [
             "K-Nearest Neighbors (KNN)",
             "K-Means",
+            "Random Forest",
             "Support Vector Machines (SVM)",
             "Artificial Neural Networks (NN)",
             "Recurrent Neural Networks (RNN)",
             "Convolutional Neural Networks (CNN)",
             "Non-Max Supression (NMS)",
-            "Derivation of Backpropogation"
+            "Derivation of Backpropogation",
+            "Ensemble Learning",
+            "Transform Learning", 
+
         ],
         "Computer Vision": [
             "Object Detection",
             "Object Recognition",
             "Instance Segmentation",
-            "Canny Edge Detection", 
-                   
+            "Canny Edge Detection",
+            "YOLO",
+            "HOG",
+
         ],
         "NLP": [
             "Feature Classification",
-            "Relationship Extraction"
+            "Relationship Extraction",
+            "transformers",
+            "English Lexicon Analysis",
+            "Feature Hybridization",
+            "NLTK"
         ],
         "libraries": [
             "NumPy",
@@ -62,18 +75,25 @@ function getSkills(){
             "OpenCV",
             "Pandas",
             "Selenium",
+            "PyTorch",
+            "Seaborn",
+            "XGBoost",
+            "Keras",
+            "Tensorflow"
         ],
         "Databasing":[
             "MariaDB",
             "MySQL",
-            "Postgres"
+            "Postgres",
+            "Data Management"
         ]
     }
     
     var indents = [];
     for (let k in s_list) {
+        var inner_indents= [];
         for (var j = 0; j < s_list[k].length; j++) {
-            indents.push(
+            inner_indents.push(
                 <div className="m-3 col-lg-3" style={{ backgroundColor: "transparent" }}>
                     <div className="rounded-lg shadow p-3" >
                         <h6 className="card-title text-center" style={{ background: "none" }}>{s_list[k][j]}</h6>
@@ -84,28 +104,34 @@ function getSkills(){
                 break;
             }
         }
+        indents.push(
+            <div className="m-5">
+                <h3 className="card-title text-xl2 font-semibold m-2" style={{ background: "none" }}>{k}</h3>
+                <div className="grid grid-flow-row grid-cols-3">
+                    {inner_indents.slice()}
+                </div>
+            </div>
+            
+        )
     }
     return indents;
 }
-
-const Skills = ({ }) => {
+const Skillpage = ({ }) => {
     return (
         <div className="sec p-5" style={{ minHeight: "100vh" }} id="Skills">
             <div className="my-auto">
                 <div className="">
-                <AnimationOnScroll animateIn="typing">
-                    <h1 style={{}} className="heading">skills+libraries+abilities</h1>
-                </AnimationOnScroll>
-                    <h6>all that mumbo jumbo</h6>
+                    <h1 style={{}} className="heading typing text-xl3 font-bold text-center">Skills</h1>
+                    <h6 className="text-center text-lg font-semibold">a comprehensive list of reasons why anyone would ever want me</h6>
+                    <h6 className="text-center text-lg font-semibold">(50+ Skills and Abilities)</h6>
                 </div>
                 <br />
-                <div className="grid grid-flow-row grid-cols-3" id="skillslist">
+                <div className="" id="skillslist">
                     {getSkills().slice()} 
-                    <a className="" style={{border:"none", textDecoration:"none"}} href=""><div className="m-3 col-lg-3 rounded-lg shadow p-3" style={{ backgroundColor: "black" }}><div className="card-body" ><h6 className="my-auto" style={{ background: "none", color:"white"}}><b>+ More</b></h6></div></div></a>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Skills;
+export default Skillpage;

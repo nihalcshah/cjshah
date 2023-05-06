@@ -6,27 +6,7 @@ body {
     scroll-behavior: smooth;
   }
   
-
-  .nav-link{
-    /* color: #13061f; */
-    text-decoration-style: double;
-  }
   
-  .navbar-custom {
-    /* background-color:#000814; */
-    background: linear-gradient(
-      to bottom,
-      rgb(0, 8, 20) 0%,
-      rgba(0, 8, 20, 0) 100%
-    );
-    color: #f2f7f2;
-    position: sticky;
-    top: 0;
-  }
-  
-  .navbar-custom ul li {
-    font-weight: 600;
-  }
   
   .hoverscroll {
     position: relative;

@@ -1,6 +1,6 @@
 import React from "react";
 import '../index.css';
-import Nav from './Nav';
+import Nav from '../Nav';
 const Coursepage = ({ }) => {
     return (
         <div className="">

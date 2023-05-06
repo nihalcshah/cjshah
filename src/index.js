@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import ErrorPage from './errorpage';
 import reportWebVitals from './reportWebVitals';
 import Coursecontainer from './CourseComponents/Coursecontainer'
+import Skillscontainer from './SkillsComponents/Skillcontainer'
 
 import {
   createBrowserRouter,
@@ -27,6 +27,11 @@ const router = createBrowserRouter([
   {
     path: "/courses",
     element: <Coursecontainer />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/skills",
+    element: <Skillscontainer />,
     errorElement: <ErrorPage />
   },
 ]);

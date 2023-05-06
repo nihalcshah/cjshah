@@ -1,133 +1,97 @@
 import React, { useEffect, useState, useRef } from "react";
 import '../index.css';
 import "animate.css/animate.min.css";
+import Typing from "./Typing";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-function getExperience() {
-    var experienceList = {
-        "The Brite Group": [
-            "Data Science Intern",
-            "2022",
-            "During my tenure as a paid intern at The Brite Group, a private government contractor known for its frequent collaborations with various US Federal Departments, I was entrusted to work under a designated mentor. My primary responsibility was to devise and construct a Natural Language Processing pipeline utilizing ensemble learning techniques to analyze the overall perception of the American population regarding contentious topics such as the War in Ukraine.",
-            "./workplaces/thebritegroup.jpg",
-            "NLP・ensemble learning・data processing",
-        ],
-        "Spraxa Solutions": [
-            "Computer Vision Intern",
-            "2021",
-            "I spent my time at Spraxa working under a mentor to analyze and design a system for shelf detection. The purpose of the internship was to develop an instance segmentation technique to find the stock of a vending machine on each opening. The eventual goal was to maximize accuracy of the model. I trained an instance segmentation model pre-trained on the Mask R-CNN Model.",
-            "./workplaces/spraxa.jpg",
-            "Computer Vision・Instance Segmentation・Memory Allocation",
-        ],
 
-    }
+const Experience = ({ }) => {
 
-    var indents = [];
-    for (let k in experienceList) {
-        indents.push(
-            <div className="p-4 inline " style={{width:"100vw"}}>
-                <AnimationOnScroll animateIn="animate__animated animate__pulse" scrollableParentSelector="">
-                <div className="rounded-3 shadow p-2" style={{ background: "none" }}>
-                    <div className="row p-3">
-                        <div className="col-md-3 ">
-                            <div className="p-3 d-flex">
-                                <img src={experienceList[k][3]} className="rounded-3 m-auto img-fluid" />
+    const experienceList = [
+        {
+            "company":"The Brite Group",
+            "year": "2022",
+            "title": "Data Science Intern",
+            "description":"During my tenure as a paid intern at The Brite Group, a private government contractor known for its frequent collaborations with various US Federal Departments, I was entrusted to work under a designated mentor. My primary responsibility was to devise and construct a Natural Language Processing pipeline utilizing ensemble learning techniques to analyze the overall perception of the American population regarding contentious topics such as the War in Ukraine.",
+            "imgpath": "./workplaces/thebritegroup.jpg",
+            "skills": "NLP・ensemble learning・data processing"
+        },
+        {
+            "company":"Spraxa Solutions",
+            "year": "2021",
+            "title": "Computer Vision Intern",
+            "description": "I spent my time at Spraxa working under a mentor to analyze and design a system for shelf detection. The purpose of the internship was to develop an instance segmentation technique to find the stock of a vending machine on each opening. The eventual goal was to maximize accuracy of the model. I trained an instance segmentation model pre-trained on the Mask R-CNN Model.",
+            "imgpath": "./workplaces/spraxa.jpg",
+            "skills": "Computer Vision・Instance Segmentation・Memory Allocation"
+        },
+    ]
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    // console.log(currentImageIndex)
+    // useEffect(() => {
+    //     const intervalId = setInterval(() => {
+    //     setCurrentImageIndex(currentImageIndex === experienceList.length - 1 ? 0 : currentImageIndex + 1);
+    //     }, 3000);
+
+    //     return () => clearInterval(intervalId);
+    // }, [currentImageIndex, experienceList]);
+
+    const handleScroll = (event) => {
+        const { scrollLeft, scrollWidth, clientWidth } = event.target;
+        const maxScrollLeft = scrollWidth - clientWidth;
+        const percentScrolled = scrollLeft / maxScrollLeft;
+        const newIndex = Math.floor(percentScrolled * experienceList.length);
+        console.log(newIndex)
+        setCurrentImageIndex(newIndex);
+    };
+
+    const exp = experienceList.map((job, index) => 
+        <div className={index === currentImageIndex ? 'dc active ' : 'dc'} style={{ minWidth: "60vw" }} key={index} >
+            <AnimationOnScroll animateIn="animate__animated animate__pulse" scrollableParentSelector="">
+                <div className="rounded-3 p-2" style={{ background: "none" }}>
+                    <div className="p-3">
+                        <div className=" ">
+                            <div className="p-3">
+                                <img src={job.imgpath} className="rounded-xl m-auto img-fluid" />
                             </div>
                         </div>
-                        <div className="col-md-6 d-flex">
+                        <div className="">
                             <div className="p-3 m-auto">
                                 <p className="text-center">
-                                    {experienceList[k][2]}
+                                    {job.description}
                                 </p>
                             </div>
                         </div>
-                        <div className="col-md-3 d-flex">
+                        <div className="">
                             <div className="p-3 m-auto text-center">
                                 <b>Skills</b>
                                 <div>
-                                    {experienceList[k][4]}
+                                    {job.skills}
                                 </div>
                                 <br />
                             </div>
                         </div>
                     </div>
                     <div className="p-2">
-                        <h6 className="text-center" style={{ letterSpacing: "0.2vw", fontWeight: "400", textTransform: "uppercase" }}>{experienceList[k][0]}・{experienceList[k][1]}</h6>
-                        <h1 className="text-center experience-title" style={{ letterSpacing: "0.25vw", fontWeight: "500", textTransform: "uppercase" }}>{k}</h1>
+                        <h6 className="text-center" style={{ letterSpacing: "0.2vw", fontWeight: "400", textTransform: "uppercase" }}>{job.company}・{job.year}</h6>
+                        <h1 className="text-center experience-title" style={{ letterSpacing: "0.25vw", fontWeight: "500", textTransform: "uppercase" }}>{job.title}</h1>
                     </div>
                 </div>
-                </AnimationOnScroll>
-            </div>
-        );
-    }
-    return indents;
-}
-
-const Typing = (props) => {
-    const [animated, setAnimated] = useState(false);
-    const textRef = useRef();
-
-    useEffect(() => {
-        const checkScroll = () => {
-            console.log("CurrentRef", textRef.current)
-            console.log()
-            const textTop = textRef.current.getBoundingClientRect().top;
-            console.log(textTop)
-            console.log("Window pos: " +window.scrollY + window.innerHeight)
-            console.log("Texttop: "+ textTop)
-            if (window.scrollY + window.innerHeight > textTop) {
-                
-                setAnimated(true);
-                window.removeEventListener('scroll', checkScroll);
-            }
-        };
-        
-        window.addEventListener('scroll', checkScroll);
-        return () => window.removeEventListener('scroll', checkScroll);
-    });
-    const animationClass = animated ? 'typing' : '';
+            </AnimationOnScroll>
+        </div>
+    );
 
     return (
-        <h1 style={{}} ref={textRef} className={`heading ${animationClass}`}>{props.header}</h1>
-    )
-}
- 
-const Experience = () => {
-    const [animated, setAnimated] = useState(false);
-    const alignScroll = useRef()
-    console.log(alignScroll.current)
-
-    useEffect(() => {
-        const checkScroll = () => {
-            console.log("CurrentRef", alignScroll.current)
-            console.log()
-            const textTop = alignScroll.current.getBoundingClientRect().top;
-            console.log(textTop)
-            console.log("Window pos: " +window.scrollY + window.innerHeight)
-            console.log("Texttop: "+ textTop)
-            if (window.scrollY + window.innerHeight > textTop) {
-                
-                setAnimated(true);
-                window.removeEventListener('scroll', checkScroll);
-            }
-        };
-        
-        window.addEventListener('scroll', checkScroll);
-        return () => window.removeEventListener('scroll', checkScroll);
-    });
-
-    return (
-        <div className="section sec2" style={{ minHeight: "100vh" }} ref={alignScroll} id="">
+        <div className="section sec" style={{ minHeight: "100vh" }} id="">
             <div className="text-center relative">
-                {/* <AnimationOnScroll animateIn="typing"> */}
                 <Typing header="work experience" />
-                {/* </AnimationOnScroll> */}
                 <h6 style={{ fontSize: "1rem" }}><u>internships, clubs, leadership (linkedin go crazy)</u></h6>
                 <br />
                 <a className="buttonFill p-2" style={{ position: "relative" }}>view more.</a>
             </div>
-            <div style={{}} className="horizontal-snap" id="horz">
-                {getExperience().slice()}
+            <div style={{maxWidth:"80vw"}} className="image-container mx-auto shadow-lg rounded-xl my-5" id="horz" onScroll={handleScroll}>
+                {exp}
+
             </div>
 
         </div>

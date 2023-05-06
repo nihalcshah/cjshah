@@ -1,23 +1,21 @@
 import React from "react";
-import '../index.css';
 const Nav = ({ }) => {
     return (
         <div style={{position: "absolute"}}>
-            <button class="cornerdrop" type="button" style={{border:"none", background:"none"}} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+            <a class="cornerdrop" style={{border:"none", background:"none"}} href="/">
                 <div class="p-2 rounded shadow" style={{backgroundColor:"none"}}>
                     <div className="row">
                     <img src="/pageicons/unnamed.png" class="img-fluid" alt="" />
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                    </svg>
+                    </svg> */}
                     
 
                     </div>
                 </div>
                 
-            </button>
-            <div class="collapse navbar-collapse justify-content-end navdrop" id="navbarSupportedContent">
+            </a>
+            {/* <div class="collapse navbar-collapse justify-content-end navdrop" id="navbarSupportedContent">
                 
                 <ul class="navbar-nav mr-auto ml-auto text-center" style={{width:"100vw"}}>
                     <li class="nav-item fs-4">
@@ -44,7 +42,7 @@ const Nav = ({ }) => {
                         </svg></a>
                     </li>
                 </ul>
-            </div>
+            </div> */}
         </div>
     );
 };
