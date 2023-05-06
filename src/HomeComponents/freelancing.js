@@ -11,17 +11,17 @@ const Freelancing = () => {
         console.log("track", track);
     });
     return (
-        <div className="sec2 container p-5" style={{ minHeight: "100vh"}} id="">
-            <div className="text-center relative mb-12">
+        <div className="sec2 container px-5 pt-5 pb-48 md:pb-0" style={{}} id="">
+            <div className="text-center relative md:mb-12 mb-32">
                 <AnimationOnScroll animateIn="typing">
                     <h1 className="font-bold text-4xl leading-normal " style={{textShadow:"1px 1px 3px rgba(0,0,0, 0.3)"}}>freelancing</h1>
                 </AnimationOnScroll>
                 <h6 className="text-lg underline underline-offset-8" style={{textShadow:"1px 1px 3px rgba(0,0,0, 0.3)"}}>lets work together</h6>
-                {/* <br/> */}
+                <br/>
                 {/* <a className="buttonFill p-2" style={{ position: "relative" }}>view more.</a> */}
             </div>
             <div className="grid  grid-cols-2 place-content-center">
-                <div className="relative w-sm-80 h-80">
+                <div className="relative w-sm-72 h-72">
                     <div className="object-scale-down absolute shadow-lg shadow-indigo-500/40 -bottom-7 -right-10 h-fit magictime swap plan bg-gradient-to-br from-indigo-900 to-transparent rounded-xl p-1 opacity-40" >
                         <div className="h-full w-full bg-white rounded-lg container text-center">
                             <h1 className="card-header font-semibold text-3xl p-2 text-center" style={{}}>static plan</h1>
