@@ -87,7 +87,7 @@ const Experience = ({ }) => {
                 <Typing header="work experience" />
                 <h6 style={{ fontSize: "1rem" }}><u>internships, clubs, leadership (linkedin go crazy)</u></h6>
                 <br />
-                <a className="buttonFill p-2" style={{ position: "relative" }}>view more.</a>
+                <a className="buttonFill p-2" style={{ position: "relative" }} href="/experience">view more.</a>
             </div>
             <div style={{maxWidth:"80vw"}} className="image-container mx-auto shadow-lg rounded-xl my-5" id="horz" onScroll={handleScroll}>
                 {exp}

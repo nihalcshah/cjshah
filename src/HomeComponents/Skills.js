@@ -101,7 +101,7 @@ const Skills = ({ }) => {
                 <br />
                 <div className="grid grid-flow-row grid-cols-3" id="skillslist">
                     {getSkills().slice()} 
-                    <a className="" style={{border:"none", textDecoration:"none"}} href=""><div className="m-3 col-lg-3 rounded-lg shadow p-3" style={{ backgroundColor: "black" }}><div className="card-body" ><h6 className="my-auto" style={{ background: "none", color:"white"}}><b>+ More</b></h6></div></div></a>
+                    <a className="" style={{border:"none", textDecoration:"none"}} href="/skills"><div className="m-3 col-lg-3 rounded-lg shadow p-3" style={{ backgroundColor: "black" }}><div className="card-body" ><h6 className="my-auto" style={{ background: "none", color:"white"}}><b>+ More</b></h6></div></div></a>
                 </div>
             </div>
         </div>

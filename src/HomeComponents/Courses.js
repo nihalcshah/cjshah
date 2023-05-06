@@ -46,7 +46,7 @@ const Courses = ({ }) => {
                                 <div className="p-2" >TJ Math 4</div>
                                 <div className="p-2" >AP Statistics (RS2)</div>
                                 <div className="p-2" >Computational Statistics (RS3)</div>
-                                <div className="pt-2"></div>
+                                <div className="pt-2">AP Calculus BC</div>
                             </div>
                         </div>
                     </AnimationOnScroll>
@@ -84,8 +84,7 @@ const Courses = ({ }) => {
                                 <div className="pb-2" >Design and Tech</div>
                                 <div className="p-2" >Geosystems</div>
                                 <div className="p-2" >AP Japanese (Japanese 1 - AP)</div>
-                                <div className="p-2" >Computational Statistics (RS3)</div>
-                                <div className="t-2">Humanities 1 & 2</div>
+                                <div className="pt-2">Humanities 1 & 2</div>
                             </div>
                         </div>
                     </AnimationOnScroll>

@@ -31,11 +31,12 @@ const Freelancing = () => {
                                 </p>
                             </div>
                             <div className="grid grid-cols-1 items-center divide-y  divide-y-reverse-2 border-t p-2" style={{ background: "none" }}>
-                                <div className="pb-2" >Research Statistics 1 (RS1)</div>
-                                <div className="p-2" >TJ Math 4</div>
-                                <div className="p-2" >AP Statistics (RS2)</div>
-                                <div className="p-2" >Computational Statistics (RS3)</div>
-                                <div className="pt-2"></div>
+                                <div className="pb-2" >React or Next.js</div>
+                                <div className="p-2" >Simple and Easy to Maintain</div>
+                                <div className="p-2" >No Additional Development Costs</div>
+                                <div className="p-2" >Fast Delivery Time</div>
+                                <div className="p-2" ><p className="text-4xl font-bold">$150</p> min</div>
+                                {/* <div className="pt-2"></div> */}
                             </div>
                         </div>
                     </div>
@@ -52,15 +53,15 @@ const Freelancing = () => {
                             <h1 className="card-header font-semibold text-3xl p-2 text-center" style={{}}>dynamic plan</h1>
                             <div className="card-body">
                                 <p className="card-text text-center p-2">
-                                    Decorational website with limited functionality, made to get information out.
+                                    Fully-functional website developed for the purposes of managing and manipulating data
                                 </p>
                             </div>
                             <div className="grid grid-cols-1 items-center divide-y  divide-y-reverse-2 border-t p-2" style={{ background: "none" }}>
-                                <div className="pb-2" >Research Statistics 1 (RS1)</div>
-                                <div className="p-2" >TJ Math 4</div>
-                                <div className="p-2" >AP Statistics (RS2)</div>
-                                <div className="p-2" >Computational Statistics (RS3)</div>
-                                <div className="pt-2">AP Calculus BC</div>
+                                <div className="pb-2">Forms, Backend Functions, Authorizations</div>
+                                <div className="p-2">Longer Development Time</div>
+                                <div className="p-2">Ease of Updating and Use</div>
+                                <div className="p-2">Optional Additional Development Costs</div>
+                                <div className="p-2" ><p className="text-4xl font-bold">$400</p> min</div>
                             </div>
                         </div>
                     </div>
