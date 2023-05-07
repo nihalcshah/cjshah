@@ -14,7 +14,7 @@ const Container = ({ }) => {
         <div className="">
             <Nav />
             <Home />
-            <Freelancing />
+            {/* <Freelancing /> */}
             <Experience />
             <Courses />
             <Skills />
