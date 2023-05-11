@@ -24,5 +24,6 @@ module.exports = {
         { values: theme('textShadow') }
       )
     }),
+    require("autoprefixer")
   ],
 }
