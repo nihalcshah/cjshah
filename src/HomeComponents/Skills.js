@@ -2,6 +2,7 @@ import React from "react";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import Typing from "./Typing";
+var ReactRotatingText = require('react-rotating-text');
 
 function reveal() {
     var skills = document.getElementById("Skills");
@@ -20,7 +21,7 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 
 
-function getSkills(){
+function getSkills() {
     var s_list = {
         "Programming Language": [
             "Python",
@@ -49,8 +50,8 @@ function getSkills(){
             "Object Detection",
             "Object Recognition",
             "Instance Segmentation",
-            "Canny Edge Detection", 
-                   
+            "Canny Edge Detection",
+
         ],
         "NLP": [
             "Feature Classification",
@@ -63,13 +64,13 @@ function getSkills(){
             "Pandas",
             "Selenium",
         ],
-        "Databasing":[
+        "Databasing": [
             "MariaDB",
             "MySQL",
             "Postgres"
         ]
     }
-    
+
     var indents = [];
     for (let k in s_list) {
         for (var j = 0; j < s_list[k].length; j++) {
@@ -80,7 +81,7 @@ function getSkills(){
                     </div>
                 </div>
             );
-            if(indents.length>10){
+            if (indents.length > 10) {
                 break;
             }
         }
@@ -90,21 +91,21 @@ function getSkills(){
 
 const Skills = ({ }) => {
     return (
-        <div className="sec p-5" style={{ minHeight: "100vh" }} id="Skills">
-            <div className="my-auto">
-                <div className="">
-                <AnimationOnScroll animateIn="typing">
-                    <h1 style={{}} className="heading">skills+libraries+abilities</h1>
-                </AnimationOnScroll>
-                    <h6>all that mumbo jumbo</h6>
-                </div>
-                <br />
-                <div className="grid grid-flow-row grid-cols-3" id="skillslist">
-                    {getSkills().slice()} 
-                    <a className="" style={{border:"none", textDecoration:"none"}} href="/skills"><div className="m-3 col-lg-3 rounded-lg shadow p-3" style={{ backgroundColor: "black" }}><div className="card-body" ><h6 className="my-auto" style={{ background: "none", color:"white"}}><b>+ More</b></h6></div></div></a>
-                </div>
+        <div className="container w-4/5 mx-auto text-white my-12 h-fit">
+            <div className="text-left relative md:mb-12 mb-6">
+                <h1 className="font-bold text-3xl leading-normal " >skills+libraries+abilities</h1>
+                <h6 className="text-lg" >who knew i could ever <span className="text-cyan-400"><ReactRotatingText deletingInterval={40} typingInterval={20} items={['skateboard', 'fly a drone', 'achieve 100% accuracy on my svm model']} pause={3000} /></span> </h6>
+            </div>
+            <div className="grid grid-flow-row grid-cols-2 md:grid-cols-3 relative" id="skillslist">
+                <div className="m-3 col-lg-3 rounded-lg shadow p-3" style={{ backgroundColor: "white" }}><div className="card-body" ><h6 className="my-auto text-base md:text-lg" style={{ background: "none", color: "black" }}><b>Web Development</b></h6></div></div>
+                <div className="m-3 col-lg-3 rounded-lg shadow p-3" style={{ backgroundColor: "white" }}><div className="card-body" ><h6 className="my-auto text-base md:text-lg" style={{ background: "none", color: "black" }}><b>UI/UX Design</b></h6></div></div>
+                <div className="m-3 col-lg-3 rounded-lg shadow p-3" style={{ backgroundColor: "white" }}><div className="card-body" ><h6 className="my-auto text-base md:text-lg" style={{ background: "none", color: "black" }}><b>Machine Learning</b></h6></div></div>
+                <div className="m-3 col-lg-3 rounded-lg shadow p-3" style={{ backgroundColor: "white" }}><div className="card-body" ><h6 className="my-auto text-base md:text-lg" style={{ background: "none", color: "black" }}><b>Data Management</b></h6></div></div>
+                <div className="m-3 col-lg-3 rounded-lg shadow p-3" style={{ backgroundColor: "white" }}><div className="card-body" ><h6 className="my-auto text-base md:text-lg" style={{ background: "none", color: "black" }}><b>Computer Vision</b></h6></div></div>
+                <a className="" style={{ border: "none", textDecoration: "none" }} href="/skills"><div className="m-3 col-lg-3 rounded-lg shadow p-3 text-base md:text-lg bg-gradient-to-br to-sky-700 from-cyan-500" ><div className="card-body" ><h6 className="my-auto"><b>+ More</b></h6></div></div></a>
             </div>
         </div>
+
     );
 };
 

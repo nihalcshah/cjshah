@@ -31,6 +31,19 @@ const Typing = (props) => {
     )
 }
 
+export const Flipping = (props) => {
+    const splittext = props.flippingtext.split("")
+    console.log(splittext)
+    const flippedText = splittext.map((letter, index)=> 
+        <span style={{"--i":index}}>{letter}</span>
+    );
+    return(
+        <div className={props.classes}>
+            {flippedText}
+        </div>
+    )
+}
+
 export function typeout() {
     var pieces = document.querySelectorAll(".typescroll");
     for (var i = 0; i < pieces.length; i++) {
