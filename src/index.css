@@ -4,11 +4,11 @@
 
 body {
   scroll-behavior: smooth;
-  font-family: 'Foldit', cursive;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .instrument{
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .heading{
