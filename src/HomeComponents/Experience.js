@@ -34,9 +34,9 @@ const Experience = ({ }) => {
             </div> */}
             <div className=" py-4 px-6   flex">
                 <div className="my-auto object-contain">
-                    <h1 className="text-3xl font-semibold">{job.company}</h1>
+                    <h1 className="text-2xl font-semibold">{job.company}</h1>
                     <h6 className="text-xl italic">{job.title}</h6>
-                    <h6 className="text-xl  mb-3">{job.year}</h6>
+                    <h6 className="text-lg  mb-3">{job.year}</h6>
                     <p className="line-clamp-3">
                         {job.description}
                     </p>

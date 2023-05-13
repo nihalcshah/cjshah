@@ -12,7 +12,7 @@ const Container = ({ }) => {
 
     return (
         <div className="">
-            {/* <Nav /> */}
+            <Nav />
             <Home />
             <Freelancing />
             <Experience />
