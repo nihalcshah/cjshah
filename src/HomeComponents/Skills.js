@@ -93,7 +93,7 @@ const Skills = ({ }) => {
     return (
         <div className="container w-4/5 mx-auto text-white my-12 h-fit">
             <div className="text-left relative md:mb-12 mb-6">
-                <h1 className="font-bold text-3xl leading-normal " >skills+libraries+abilities</h1>
+                <h1 className="font-bold text-3xl leading-normal instrument" >skills+libraries+abilities</h1>
                 <h6 className="text-lg" >who knew i could ever <span className="text-cyan-400"><ReactRotatingText deletingInterval={40} typingInterval={20} items={['skateboard', 'fly a drone', 'achieve 100% accuracy on my svm model']} pause={3000} /></span> </h6>
             </div>
             <div className="grid grid-flow-row grid-cols-2 md:grid-cols-3 relative" id="skillslist">
