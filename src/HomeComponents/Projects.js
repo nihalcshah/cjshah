@@ -15,10 +15,10 @@ const Projects = () => {
                 {/* <a className="buttonFill p-2" style={{ position: "relative" }}>view more.</a> */}
                 
             </div>
-            <div className="flex flex-col text-white relative">
+            <div className="flex flex-col text-white relative mb-3">
                 <div className="mx-auto text-center g">
                     <div className="flex mx-auto my-3">
-                        <img src="workplaces/spraxa.jpg" className="h-16 md:h-10 object-contain rounded-lg mr-4 my-1" />
+                        <img src="workplaces/sizemeup.png" className="h-16 w-16 md:h-10 object-contain rounded-lg mr-4 my-1" />
                         <div className="my-auto text-left">
                             <div className="text-xl font-semibold">SizeMeUp</div>
                             <div>2023</div>
@@ -27,15 +27,19 @@ const Projects = () => {
 
                     </div>
                     <div className="flex mx-auto my-3">
-                        <img src="workplaces/spraxa.jpg" className="h-16 md:h-10 object-contain rounded-lg mr-4 my-1" />
+                        <img src="workplaces/soundtrackify.png" className="h-16 w-16 md:h-10 object-contain rounded-lg mr-4 my-1" />
                         <div className="my-auto text-left">
                             <div className="text-xl font-semibold">Soundtrackify</div>
                             <div>2023</div>
-                            <div className="w-full text-sm italic" >A heuristics based constraint set problem to generate collages from Spotify playlists using the Spotify API</div>
+                            <div className="w-full text-sm italic" >A heuristics-based constraint set problem to generate collages from Spotify playlists using the Spotify API</div>
                         </div>
-
                     </div>
                 </div>
+            </div>
+            <div className="relative flex">
+                <a href="/projects" className="p-1 bg-gradient-to-br to-indigo-400 from-cyan-400 rounded-xl mx-auto">
+                    <div className="h-full w-full bg-gradient-to-br to-slate-800 from-slate-900 text-white px-3 py-2 rounded-lg font-bold hover:to-indigo-400 hover:from-cyan-400">Check Out More</div>
+                </a>
             </div>
         </div>
     );
