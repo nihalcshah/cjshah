@@ -10,7 +10,6 @@ var ReactRotatingText = require('react-rotating-text');
 const Courses = ({ }) => {
     function expandMath() {
         const mathelement = document.getElementById("expandedMath");
-        console.log(mathelement)
         if (mathelement.classList.contains("hidden")) {
             mathelement.classList.remove("hidden");
             document.getElementById("mathexpand").classList.add("hidden");
@@ -24,7 +23,6 @@ const Courses = ({ }) => {
 
     function expandCS() {
         const cselement = document.getElementById("expandedCS");
-        console.log(cselement)
         if (cselement.classList.contains("hidden")) {
             cselement.classList.remove("hidden");
             document.getElementById("csexpand").classList.add("hidden");
@@ -38,7 +36,6 @@ const Courses = ({ }) => {
 
     function expandTech() {
         const techelement = document.getElementById("expandedTech");
-        console.log(techelement)
         if (techelement.classList.contains("hidden")) {
             techelement.classList.remove("hidden");
             document.getElementById("techexpand").classList.add("hidden");

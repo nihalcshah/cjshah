@@ -1,23 +1,26 @@
 import React from "react";
-import Sidebar from "./Sidebar";
 import Home from './Home';
 import Courses from './Courses';
 import Skills from './Skills';
 import Nav from '../Nav';
 import Experience from "./Experience";
 import Freelancing from "./freelancing";
+import Footer from "./Footer";
 import {typeout} from "./Typing"
+import Projects from "./Projects";
 const Container = ({ }) => {
     window.addEventListener("scroll", typeout)
 
     return (
         <div className="">
-            <Nav />
+            <Nav path="./" />
             <Home />
             <Freelancing />
             <Experience />
+            <Projects />
             <Courses />
             <Skills />
+            {/* <Footer /> */}
         </div>
     );
 };

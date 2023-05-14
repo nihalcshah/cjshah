@@ -5,7 +5,7 @@ import Skillpage from "./Skillspage";
 const Container = ({ }) => {
     return (
         <div className="">
-            {/* <Nav /> */}
+            <Nav path="../" />
             <Skillpage />
         </div>
     );

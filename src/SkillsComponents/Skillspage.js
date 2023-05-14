@@ -96,7 +96,7 @@ function getSkills() {
         for (var j = 0; j < s_list[k].length; j++) {
             inner_indents.push(
                 <div className="m-3 col-lg-3" style={{ backgroundColor: "transparent" }}>
-                    <div className="rounded-lg shadow-md shadow-indigo-400 p-3 " >
+                    <div className="rounded-lg shadow-md shadow-indigo-400 p-3 break-words md:break-normal" >
                         <h6 className="card-title text-center text-lg font-semibold">{s_list[k][j]}</h6>
                     </div>
                 </div>

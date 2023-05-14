@@ -8,14 +8,13 @@ const isSafari = window.navigator.userAgent.indexOf('Safari') != -1
 
 const Freelancing = () => {
     useEffect(() => {
-        console.log(document.getElementById("sdf"))
 
         if(isSafari){
             
         }
     });
     return (
-        <div className=" container w-4/5 md:my-4 box-decoration-clone mx-auto text-white" style={{}} id="sdf">
+        <div className=" container w-4/5 md:my-4 box-decoration-clone mx-auto text-white" style={{}} id="freelancingpage">
             <div className="text-left relative md:mb-12 mb-6">
                 <h1 className="font-bold text-4xl leading-normal " >freelancing</h1>
                 <h6 className="text-lg" >i'm a <span className="text-cyan-400"><ReactRotatingText deletingInterval={40} typingInterval={40} items={['hardworking', 'great', 'lazy...']}s pause={3000}/></span>partner</h6>

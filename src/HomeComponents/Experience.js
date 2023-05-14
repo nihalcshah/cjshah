@@ -47,7 +47,7 @@ const Experience = ({ }) => {
     );
 
     return (
-        <div className=" container w-4/5 mx-auto text-white my-12 h-4/5" id="">
+        <div className=" container w-4/5 mx-auto text-white my-12 h-4/5" id="experiencepage">
             <div className="text-left relative md:mb-12 mb-6">
                 <h1 className="font-bold text-4xl leading-normal " >experience</h1>
                 <h6 className="text-lg" >internships, clubs, leadership <span className="text-cyan-400">(<ReactRotatingText deletingInterval={40} typingInterval={20} items={['linkedin go crazy', 'my resume>>>', 'ask my former bosses']} pause={3000} />)</span></h6>
