@@ -8,6 +8,7 @@ import Freelancing from "./freelancing";
 import Footer from "./Footer";
 import {typeout} from "./Typing"
 import Projects from "./Projects";
+import Stack from "./Stack";
 const Container = ({ }) => {
     window.addEventListener("scroll", typeout)
 
@@ -18,6 +19,7 @@ const Container = ({ }) => {
             <Freelancing />
             <Experience />
             <Projects />
+            <Stack />
             <Courses />
             <Skills />
             {/* <Footer /> */}

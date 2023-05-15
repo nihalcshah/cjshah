@@ -30,7 +30,35 @@ body {
 .react-rotating-text-cursor {
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
 }
+
+.stackdev{
+
+}
  
+.stackdev .desc{
+  display: none;
+  transform: skewY(10deg);
+}
+
+.stackdev .imgbg{
+  display: none;
+  
+}
+
+.stackdev .image{
+  transform: skewY(10deg);
+}
+
+.stackdev:hover .imgbg{
+  display: block;
+  transform: skewY(10deg);
+}
+
+.stackdev:hover .desc{
+  display: block;
+  transform: skewY(10deg);
+}
+
 @keyframes blinking-cursor {
   0% {
     opacity: 0;
