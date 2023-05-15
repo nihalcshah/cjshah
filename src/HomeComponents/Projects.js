@@ -8,7 +8,7 @@ const isSafari = window.navigator.userAgent.indexOf('Safari') != -1
 
 const Projects = () => {
     return (
-        <div className=" container w-4/5 md:my-4 box-decoration-clone mx-auto text-white overflow-hidden" id="projectspage" style={{}} >
+        <div className=" container w-4/5 md:my-4 box-decoration-clone mx-auto text-white overflow-hidden mb-5" id="projectspage" style={{}} >
             <div className="text-left relative md:mb-12 mb-6">
                 <h1 className="font-bold text-4xl leading-normal " >projects</h1>
                 <h6 className="text-lg" >c'mon cj there's no way you spent all that time to make <span className="text-cyan-300"><ReactRotatingText deletingInterval={40} typingInterval={40} items={['a playlist image generator', 'a clothing sizer', 'a international night ticket distributor']}s pause={3000}/></span></h6>

@@ -19,8 +19,8 @@ const Home = ({ }) => {
     const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
     return (
-        <div className="grid place-items-center h-screen" id="Home">
-            <div className="fixed h-screen w-screen bg-gradient-to-br from-slate-950 via-slate-700 via-80% to-slate-800 bg-fixed hollow overflow-hidden">
+        <div className="grid place-items-center w-full h-screen" id="Home">
+            <div className="fixed h-screen w-screen bg-gradient-to-br from-slate-950 via-slate-700 via-80% to-slate-800 bg-fixed">
                 <svg className="opacity-25" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
                     <defs>
