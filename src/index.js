@@ -5,7 +5,8 @@ import ErrorPage from './errorpage';
 import reportWebVitals from './reportWebVitals';
 import Coursecontainer from './CourseComponents/Coursecontainer'
 import Skillscontainer from './SkillsComponents/Skillcontainer'
-
+import ProjectsContainer from './ProjectsComponents/ProjectsContainer'
+import ExperienceContainer from './ExperienceComponents/ExperienceContainer'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -32,6 +33,16 @@ const router = createBrowserRouter([
   {
     path: "/skills",
     element: <Skillscontainer />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/experience",
+    element: <ExperienceContainer />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/projects",
+    element: <ProjectsContainer />,
     errorElement: <ErrorPage />
   },
 ]);
