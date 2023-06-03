@@ -49,7 +49,7 @@ const Contact = ({ }) => {
             </div>
             <div className="flex rounded-lg bg-white p-5 text-black" id="contactForm">
                 <div className="mx-auto">
-                    <form name="contact" method="POST" className="text-xl" action="/skills" data-netlify="true">
+                    <form name="contact" method="GET" className="text-xl" action="/skills" data-netlify="true">
                         <p className="m-3">
                             <input placeholder="Name" className="p-2 pl-5 w-full bg-gray-700 text-white focus:outline-sky-500 focus:outline-offset-2 caret-sky-400 rounded-md " type="text" name="name" />
                         </p>
