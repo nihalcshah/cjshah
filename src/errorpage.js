@@ -18,9 +18,9 @@ export default function ErrorPage() {
 
         <p className="text-center font-semirbold text-xl italic">Page Not Found</p>
         <h6 className="text-2xl" >You are <span className="bg-gradient-to-br to-cyan-300 from-emerald-200 text-transparent bg-clip-text"><ReactRotatingText deletingInterval={40} typingInterval={40} items={['_________.', 'very, very lost.', 'not where you\'re supposed to be.', 'in the wrong place at the wrong time.']} pause={3000} /></span></h6>
-        {/* <p>
+        <p>
           <i>{error.statusText || error.message}</i>
-        </p> */}
+        </p>
       </div>
 
     </div>

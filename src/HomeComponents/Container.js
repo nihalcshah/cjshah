@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import {typeout} from "./Typing"
 import Projects from "./Projects";
 import Stack from "./Stack";
+import Contact from "./Contact"
 const Container = ({ }) => {
     window.addEventListener("scroll", typeout)
 
@@ -17,6 +18,7 @@ const Container = ({ }) => {
             <Nav path="./" />
             <Home />
             <Freelancing />
+            <Contact />
             <Experience />
             <Projects />
             <Stack />
