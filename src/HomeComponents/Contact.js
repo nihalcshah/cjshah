@@ -50,6 +50,10 @@ const Contact = ({ }) => {
           .then(() => console.log("Form successfully submitted"))
           .catch((error) => alert(error));
       };
+      
+      document
+        .querySelector("form")
+        .addEventListener("submit", handleSubmit);
 
     return (
         <div className=" container w-4/5 mx-auto text-white my-12 h-4/5 relative" id="">
@@ -64,7 +68,7 @@ const Contact = ({ }) => {
             </div>
             <div className="flex rounded-lg bg-white p-5 text-black" id="contactForm">
                 <div className="mx-auto">
-                    <form name="contact" method="POST" onSubmit={handleSubmit} className="text-xl" action="/" netlify>
+                    <form name="contact" method="POST" className="text-xl" action="/" netlify>
                         <p className="m-3">
                             <input placeholder="Name" className="p-2 pl-5 w-full bg-gray-700 text-white focus:outline-sky-500 focus:outline-offset-2 caret-sky-400 rounded-md " type="text" name="name" />
                         </p>
