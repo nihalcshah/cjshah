@@ -7,6 +7,7 @@ import Coursecontainer from './CourseComponents/Coursecontainer'
 import Skillscontainer from './SkillsComponents/Skillcontainer'
 import ProjectsContainer from './ProjectsComponents/ProjectsContainer'
 import ExperienceContainer from './ExperienceComponents/ExperienceContainer'
+import Organizer from "./BlogPages/Organizer"
 import {
   createBrowserRouter,
   RouterProvider,
@@ -45,7 +46,8 @@ const router = createBrowserRouter([
     element: <ProjectsContainer />,
     errorElement: <ErrorPage />
   },
-]);
+].concat(Organizer)
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

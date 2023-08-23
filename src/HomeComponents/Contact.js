@@ -41,11 +41,11 @@ const Contact = ({ }) => {
             <div className="text-left relative mb-6">
                 <h1 className="font-bold text-4xl leading-normal " >contact me</h1>
                 <h6 className="text-lg mb-3" ><span className="text-cyan-400"><ReactRotatingText deletingInterval={40} typingInterval={20} items={['Reach out', 'Hit me up', 'Let\'s talk']} pause={3000} /></span></h6>
-                <button onClick={contactToggle} className="text-middle mx-auto rounded-lg bg-gradient-to-br from-sky-400 to-sky-950 text-sky-200 relative py-1 px-4 font-bold hover:from-sky-100 hover:to-sky-300 hover:text-sky-500">
+                {/* <button onClick={contactToggle} className="text-middle mx-auto rounded-lg bg-gradient-to-br from-sky-400 to-sky-950 text-sky-200 relative py-1 px-4 font-bold hover:from-sky-100 hover:to-sky-300 hover:text-sky-500">
                     <svg xmlns="http://www.w3.org/2000/svg" id="downIcon" className="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>
-                </button>
+                </button> */}
             </div>
             <div className="flex rounded-lg bg-white p-5 text-black" id="contactForm">
                 <div className="mx-auto">
