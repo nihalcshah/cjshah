@@ -76,8 +76,8 @@ const Home = ({ }) => {
             <div className="px-3 text-center text-white" style={{}} id="middleblock">
                 <div style={{}} className="p-2 text-5xl ">
                     <div style={{ animationDelay: "0.7s", fontFamily: 'Instrument Sans, sans-serif' }} className=" text-pop pb-2 filltext  ">
-                        <h2 className="px-1 text-7xl md:text-8xl instrument">nihal shah.</h2>
-                        <h2 className="px-1 text-7xl md:text-8xl instrument">nihal shah.</h2>
+                        <h2 className="px-1 text-7xl md:text-8xl instrument">cj shah.</h2>
+                        <h2 className="px-1 text-7xl md:text-8xl instrument">cj shah.</h2>
                     </div>
                     <div className="text-pop text-lg pb-1 font-bold"><Flipping classes="waviy" flippingtext="hello・お胚葉・salvē・नमस्ते・jambo" /></div>
                 </div>
