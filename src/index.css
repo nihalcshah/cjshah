@@ -116,11 +116,42 @@ body {
 }
 
 .filltext h2:nth-child(2) {
-	/* color: #ffffff; */
   position: absolute;
 	transform: translate(0%, -100%);
 	animation: animate 4s ease-in-out infinite;
 }
+
+@media only screen and (max-width: 379px) {
+  .filltext h2:nth-child(2) {
+    position: absolute;
+    transform: translate(12.5%, -100%);
+    animation: animate 4s ease-in-out infinite;
+  }
+ }
+
+@media only screen and (max-width: 767px) and (min-width: 379px){
+  .filltext h2:nth-child(2) {
+    position: absolute;
+    transform: translate(16%, -100%);
+    animation: animate 4s ease-in-out infinite;
+  }
+ }
+
+ @media only screen and (max-width: 900px) and (min-width: 767px)  {
+  .filltext h2:nth-child(2) {
+    position: absolute;
+    transform: translate(0%, -100%);
+    animation: animate 4s ease-in-out infinite;
+  }
+}
+/*
+@media only screen and (min-width: 1000px) and (max-width:1200) {
+  .filltext h2:nth-child(2) {
+    position: absolute;
+    transform: translate(100%, -100%);
+    animation: animate 4s ease-in-out infinite;
+  }
+}  */
 
 @keyframes animate {
 	0%,
