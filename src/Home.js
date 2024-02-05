@@ -1,8 +1,11 @@
 import React from "react";
 import { useRef, useEffect, useState } from 'react';
 import "./index.css"
-import { Tooltip } from 'flowbite-react';
+import { Card, Tooltip } from 'flowbite-react';
+import { experienceConstant } from "./Information";
 import Nav from "./Nav";
+
+
 
 function Home() {
 
@@ -45,7 +48,7 @@ function Home() {
     <div className=" text-white overflow-x-hidden bg-gradient-to-r from-blue-400 to-violet-600 dark:to-indigo-900 dark:from-indigo-950  max-w-screen h-screen font-classifier font-bold">
 
       {/* Navigation Component */}
-      <Nav />
+      <Nav /> 
 
       {/* Dark Mode Controlling */}
       <button className="fixed right-10 md:right-20 bottom-10 z-50 w-10 h-5 rounded-full bg-indigo-200/70 flex items-center transition duration-300  focus:outline-none shadow" onClick={toggleTheme} >
@@ -465,6 +468,130 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Experience */}
+      <div className="flex flex-col w-screen min-h-[30rem] relative">
+        <div className="absolute w-screen h-full bottom-0">
+          <svg className="opacity-[50%] md:dark:opacity-[80%]" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <defs>
+              <linearGradient id="bg2">
+                <stop offset="0%" stopColor="currentColor" className="text-blue-300 dark:text-blue-500"></stop>
+                <stop offset="50%" stopColor="currentColor" className="text-indigo-200 dark:text-indigo-400" ></stop>
+                <stop offset="100%" stopColor="currentColor" className="text-violet-300 dark:text-violet-400"></stop>
+              </linearGradient>
+              <path id="wave2" fill="url(#bg2)" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+	s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
+            </defs>
+            <g>
+              <use xlinkHref="#wave2" opacity=".3">
+                <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="translate"
+                  dur="10s"
+                  calcMode="spline"
+                  values="270 230; -334 180; 270 230"
+                  keyTimes="0; .5; 1"
+                  keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                  repeatCount="indefinite" />
+              </use>
+              <use xlinkHref="#wave2" opacity=".6">
+                <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="translate"
+                  dur="8s"
+                  calcMode="spline"
+                  values="-270 230;243 220;-270 230"
+                  keyTimes="0; .6; 1"
+                  keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                  repeatCount="indefinite" />
+              </use>
+              <use opacty=".9">
+                <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="translate"
+                  dur="6s"
+                  calcMode="spline"
+                  values="0 230;-140 200;0 230"
+                  keyTimes="0; .4; 1"
+                  keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                  repeatCount="indefinite" />
+              </use>
+            </g>
+          </svg>
+        </div>
+        {/* Experience content */}
+        <div className="flex flex-col w-full px-16 py-10 h-full z-30">
+          <div className="text-5xl m-auto md:m-0 md:text-7xl pb-4">Experience</div>
+          <div className="grid md:grid-cols-3 gap-6 mt-4">
+            <div className="rounded-lg bg-indigo-300 text-black dark:text-white p-4 dark:bg-gradient-to-r from-indigo-800 to-indigo-900 via-70">
+              <h3 className="text-2xl pb-1 ">The Brite Group <span className="font-medium">|</span> <span className="italic font-medium"> 2022</span></h3>
+              <div className="mt-2"><i>Data Science Intern</i></div>
+              <div className="font-normal text-clip text-ellipsis line-clamp-2 md:line-clamp-none">
+                Contractor work for use in projects with the <span className="font-bold text-violet-700 dark:text-amber-400 dark:text-amber-400">US Dept. of Defense</span> and the <span className="font-bold text-violet-700 dark:text-amber-400">US Dept. of Education</span> to create
+                <span className="font-bold text-violet-700 dark:text-amber-400"> a Natural Language Processing</span> framework. Created for high-detail sentiment extraction with through the use of <span className="font-bold text-violet-700 dark:text-amber-400">transformers</span> and <span className="font-bold text-violet-700 dark:text-amber-400">BERT</span >.
+              </div>
+              <hr className="py-1 mt-3" height="4" />
+              <div className="flex pb-0 pt-1">
+                <div className="mx-auto gap-x-5 flex">
+                  <div className="p-1 bg-black dark:bg-white rounded-full aspect-square object-fit">
+                    <img className="w-8 h-8 invert dark:invert-0" src="https://static-00.iconduck.com/assets.00/aws-icon-2048x2048-ptyrjxdo.png" />
+                  </div>
+                  <div className="p-1 m-auto bg-black dark:bg-white rounded-full aspect-square object-fit">
+                    <img className="w-8 h-8 invert dark:invert-0" src="https://friconix.com/png/fi-xnsuxl-tensorflow.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-lg bg-indigo-300 text-black dark:text-white dark:bg-gradient-to-r from-indigo-800 to-indigo-900 via-70 p-4">
+              <h3 className="text-2xl pb-1 ">Spraxa Solutions<span className="font-medium">|</span> <span className="italic font-medium"> 2021</span></h3>
+              <div className="mt-2"><i>Computer Vision Intern</i></div>
+              <div className="font-normal text-clip text-ellipsis line-clamp-2 md:line-clamp-none">
+                Created and designed an instance-segmentation model exercising shelf detection using <span className="font-bold text-violet-700 dark:text-amber-400">OpenCV</span>, <span className="font-bold text-violet-700 dark:text-amber-400">Tensorflow</span>, and <span className="font-bold text-violet-700 dark:text-amber-400">Keras</span> to apply the <span className="font-bold text-violet-700 dark:text-amber-400">YOLOv5</span> algorithm for use in  restock-analysis to reduce shipping costs.
+              </div>
+              <hr className="py-1 mt-3" height="4" />
+              <div className="flex pb-0 pt-1">
+                <div className="mx-auto gap-x-5 flex">
+                  <div className="p-1 bg-black dark:bg-white rounded-full aspect-square object-fit">
+                    <img className="w-8 h-8 invert dark:invert-0" src="https://global.discourse-cdn.com/business7/uploads/opencv/original/1X/76487ef436ed28b0102012160fcdae1be1efd4d4.png" />
+                  </div>
+                  <div className="p-1 bg-black dark:bg-white rounded-full aspect-square object-fit">
+                    <img className="w-8 h-8" src="https://www.svgrepo.com/show/376344/python.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-lg bg-indigo-300 text-black dark:text-white dark:bg-gradient-to-r from-indigo-800 to-indigo-900 via-70 p-4">
+              <h3 className="text-2xl pb-1 ">Libra.ai <span className="font-medium">|</span> <span className="italic font-medium"> 2020</span></h3>
+              <div className="mt-2"><i>SQL Research and Development</i></div>
+              <div className="font-normal text-clip text-ellipsis line-clamp-2 md:line-clamp-none">
+                Designed a data-management and data-input mechanism through <span className="text-violet-700 dark:text-amber-400 font-bold">SQL</span> for large-form inputs to be run through simple one-liners for machine learning model training and development. Inputs had to be suitable and <span className="font-bold text-violet-700 dark:text-amber-400">formatted</span> for <span className="font-bold text-violet-700 dark:text-amber-400">PyTorch</span> and numerous other frameworks.
+              </div>
+              <hr className="py-1 mt-3" height="4" />
+              <div className="flex pb-0 pt-1">
+                <div className="mx-auto gap-x-5 flex">
+                  <div className="p-1 bg-black dark:bg-white relative rounded-full aspect-square">
+                    <img className="w-8 h-8 rounded-full object-fill" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/640px-Postgresql_elephant.svg.png" />
+                  </div>
+                  <div className="p-1 m-auto bg-black dark:bg-white rounded-full aspect-square object-fit">
+                    <img className="w-8 h-8 invert dark:invert-0" src="https://friconix.com/png/fi-xnsuxl-tensorflow.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Expansion Link */}
+        <a href="#" className="flex relative mx-auto mb-[3rem] px-2 bg-white text-blue-400 hover:bg-black dark:bg-indigo-500 dark:text-indigo-950 dark:hover:text-white dark:hover:bg-blue-950 rounded-lg w-fit stroke-2 " >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" className="pr-2 w-8 h-8" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          <div className="text-xl my-auto">View More</div>
+        </a>
       </div>
 
 

@@ -3,6 +3,8 @@ import Home from './Home';
 import ReactDOM from 'react-dom/client';
 import "./index.css"
 import 'flowbite';
+import Error from './Error';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,6 +15,7 @@ const router = createBrowserRouter(
   {
     path: "/",
     element: <Home />,
+    errorElement: <Error />,
   },
 ]
 );
