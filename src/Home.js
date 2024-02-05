@@ -164,7 +164,7 @@ function Home() {
       </div>
 
       {/* Introduction Piece */}
-      <div className="flex flex-col md:flex-row md:p-0 py-10 w-screen h-fit md:min-h-[25rem] relative">
+      <div id="opener" className="flex flex-col md:flex-row md:p-0 py-10 w-screen h-fit md:min-h-[25rem] relative">
         <div className="absolute w-screen z-10 h-full bottom-0 rotate-180">
           <svg className="opacity-[50%] dark:opacity-40 md:dark:opacity-[80%]" version="1.1" xmlns="http://www.w3.org/2000/svg"
             x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
@@ -231,7 +231,7 @@ function Home() {
       </div>
 
       {/* Projects */}
-      <div className="flex flex-col w-screen h-fit relative bg-white dark:bg-indigo-950/40">
+      <div id="projects" className="flex flex-col w-screen h-fit relative bg-white dark:bg-indigo-950/40">
         <div className="w-full min-h-[20rem] px-8 pt-8 z-20 md:p-16 pb-10 m-auto flex flex-col bg-[url('../public/img/contd.svg')] dark:bg-[url('../public/img/whitecontd.svg')]" style={{ backgroundRepeat: "round space" }}>
           <div className="w-full h-full rounded-2xl bg-blend-darken bg-white/60 dark:bg-transparent pt-5 px-5">
             <div className="absolute left-0 bottom-0 w-screen h-full z-10">
@@ -287,7 +287,7 @@ function Home() {
               </svg>
             </div>
             {/* Title */}
-            <div className="w-full flex z-40 flex-col md:items-end relative h-fit ">
+            <div  className="w-full flex z-40 flex-col md:items-end relative h-fit ">
               <div className="text-indigo-400 md:text-indigo-600 text-center md:text-right md:text-indigo-900 text-5xl md:text-8xl text-shadow relative">Projects</div>
               <div className="hidden md:block text-indigo-400 text-center md:text-right text-4xl md:text-8xl text-shadow absolute bottom-[0.1rem] left-[0.1rem] md:right-[0.25rem]">Projects</div>
             </div>
@@ -334,7 +334,7 @@ function Home() {
       </div>
 
       {/* Academics */}
-      <div className="flex flex-col w-screen min-h-[30rem] relative">
+      <div id="academics" className="flex flex-col w-screen min-h-[30rem] relative">
         <div className="absolute w-screen h-full bottom-0 rotate-180">
           <svg className="opacity-[50%] md:dark:opacity-[80%]" version="1.1" xmlns="http://www.w3.org/2000/svg"
             x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
@@ -439,8 +439,8 @@ function Home() {
       </div>
 
       {/* Education */}
-      <div className="flex flex-col w-screen h-fit relative bg-white dark:bg-indigo-950/40">
-        <div className="w-full h-fit p-8 md:p-16 m-auto flex flex-col bg-[url('../public/img/contd.svg')] dark:bg-[url('../public/img/whitecontd.svg')]" style={{ backgroundRepeat: "round space" }}>
+      <div  className="flex flex-col w-screen h-fit relative bg-white dark:bg-indigo-950/40">
+        <div id="education" className="w-full h-fit p-8 md:p-16 m-auto flex flex-col bg-[url('../public/img/contd.svg')] dark:bg-[url('../public/img/whitecontd.svg')]" style={{ backgroundRepeat: "round space" }}>
           <div className="flex md:flex-row flex-col m-auto gap-y-6 md:gap-x-6">
             {/* Penn State */}
             <div className="p-4 px-6 md:p-6 md:py-8 w-full md:w-1/2 m-auto rounded-2xl bg-indigo-500/90 flex">
@@ -471,7 +471,7 @@ function Home() {
       </div>
 
       {/* Experience */}
-      <div className="flex flex-col w-screen min-h-[30rem] relative">
+      <div id="experience" className="flex flex-col w-screen min-h-[30rem] relative">
         <div className="absolute w-screen h-full bottom-0">
           <svg className="opacity-[50%] md:dark:opacity-[80%]" version="1.1" xmlns="http://www.w3.org/2000/svg"
             x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
